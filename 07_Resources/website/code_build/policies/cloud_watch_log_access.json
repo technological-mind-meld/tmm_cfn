@@ -1,0 +1,25 @@
+{
+	"CodeBuildWebpagePolicyCWL": {
+		"Type": "AWS::IAM::Policy",
+		"Properties": {
+			"Roles": [ { "Ref": "CodeBuildWebpageRole" } ],
+			"PolicyName": "cloud_watch_log_access",
+			"PolicyDocument": {
+				"Version": "2012-10-17",
+				"Statement": [
+					{
+						"Effect": "Allow",
+						"Action": [
+							"logs:CreateLogGroup",
+							"logs:CreateLogStream",
+							"logs:PutLogEvents"
+						],
+						"Resource": [
+							{ "Fn::Sub": "arn:aws:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/codebuild/*" }
+						]
+					}
+				]
+			}
+		}
+	}
+}

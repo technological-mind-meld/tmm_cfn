@@ -1,0 +1,23 @@
+{
+	"S3Webpage": {
+		"Type": "AWS::S3::Bucket",
+		"Properties": {
+			"AccessControl": "PublicRead",
+			"BucketName": "podcast.0x4447.com",
+			"CorsConfiguration": {
+				"CorsRules": [
+					{
+						"AllowedHeaders": ["Authorization"],
+						"AllowedMethods": ["GET"],
+						"AllowedOrigins": ["*"],
+						"MaxAge": 3000
+					}
+				]
+			},
+			"WebsiteConfiguration": {
+				"ErrorDocument": "error.html",
+				"IndexDocument": "index.html"
+			}
+		}
+	}
+}

@@ -1,0 +1,21 @@
+{
+	"CodeBuildWebpagePolicyCloudFrontList": {
+		"Type": "AWS::IAM::Policy",
+		"Properties": {
+			"Roles": [ { "Ref": "CodeBuildWebpageRole" } ],
+			"PolicyName": "cloud_front_list",
+			"PolicyDocument": {
+				"Version": "2012-10-17",
+				"Statement": [
+					{
+						"Effect": "Allow",
+						"Action": [
+							"cloudfront:ListDistributions"
+						],
+						"Resource": "*"
+					}
+				]
+			}
+		}
+	}
+}

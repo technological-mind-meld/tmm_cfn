@@ -1,0 +1,8 @@
+{
+    "ProgrammaticDevelopment": {
+        "Type": "AWS::IAM::User",
+        "Properties": {
+            "UserName": "p_development_webpage_podcast_smtp"
+        }
+    }
+}

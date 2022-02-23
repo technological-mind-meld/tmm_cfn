@@ -1,0 +1,15 @@
+{
+    "CertificateManager": {
+        "Type" : "AWS::CertificateManager::Certificate",
+        "Properties" : {
+            "DomainName" : "podcast.0x4447.com",
+            "ValidationMethod" : "DNS",
+            "DomainValidationOptions" : [
+                {
+                    "DomainName" : "podcast.0x4447.com",
+                    "HostedZoneId" : "Z00371243A7EXXU5625PX"
+                }
+            ]
+        }
+    }
+}

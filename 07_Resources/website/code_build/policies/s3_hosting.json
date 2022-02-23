@@ -1,0 +1,22 @@
+{
+	"CodeBuildWebpagePolicyS3Hosting": {
+		"Type": "AWS::IAM::Policy",
+		"Properties": {
+			"Roles": [ { "Ref": "CodeBuildWebpageRole" } ],
+			"PolicyName": "s3_hosting",
+			"PolicyDocument": {
+				"Version": "2012-10-17",
+				"Statement": [
+					{
+						"Effect": "Allow",
+						"Action": [
+							"s3:PutObject",
+							"s3:DeleteObject"
+						],
+						"Resource": { "Fn::Sub": "arn:aws:s3:::${S3Webpage}/*"}
+					}
+				]
+			}
+		}
+	}
+}

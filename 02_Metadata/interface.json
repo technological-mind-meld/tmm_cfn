@@ -1,0 +1,17 @@
+{
+    "AWS::CloudFormation::Interface" : {
+            "ParameterGroups": [
+                {
+                    "Label": {
+                        "default": "Basic"
+                    },
+                    "Parameters": [
+                        "GitHubTokenParam"
+                    ]
+                }
+            ],
+            "ParameterLabels": {
+                "GitHubTokenParam": { "default": "GitHub Token" }
+            }
+        }
+}

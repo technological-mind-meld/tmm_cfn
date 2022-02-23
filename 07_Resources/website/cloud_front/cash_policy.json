@@ -1,0 +1,27 @@
+{
+	"CloudFrontCachePolicy": {
+		"Type": "AWS::CloudFront::CachePolicy",
+		"Properties": {
+			"CachePolicyConfig": {
+				"Name": "podcast",
+				"Comment": "Default setting.",
+				"DefaultTTL": 86400,
+				"MaxTTL": 31536000,
+				"MinTTL": 86400,
+				"ParametersInCacheKeyAndForwardedToOrigin": {
+					"EnableAcceptEncodingBrotli": true,
+					"EnableAcceptEncodingGzip": true,
+					"CookiesConfig": {
+						"CookieBehavior": "all"
+					},
+					"HeadersConfig": {
+						"HeaderBehavior": "none"
+					},
+					"QueryStringsConfig": {
+						"QueryStringBehavior": "all"
+					}
+				}
+			}
+		}
+	}
+}

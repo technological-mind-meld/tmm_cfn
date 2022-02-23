@@ -1,0 +1,21 @@
+{
+	"CodeBuildWebpagePolicyCloudFrontCreateInvalidation": {
+		"Type": "AWS::IAM::Policy",
+		"Properties": {
+			"Roles": [ { "Ref": "CodeBuildWebpageRole" } ],
+			"PolicyName": "cloud_front_invalidate",
+			"PolicyDocument": {
+				"Version": "2012-10-17",
+				"Statement": [
+					{
+						"Effect": "Allow",
+						"Action": [
+							"cloudfront:CreateInvalidation"
+						],
+						"Resource": "*"
+					}
+				]
+			}
+		}
+	}
+}

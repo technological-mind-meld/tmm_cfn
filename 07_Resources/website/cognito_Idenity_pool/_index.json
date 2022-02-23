@@ -1,0 +1,9 @@
+{
+	"CognitoIdentityPool": {
+		"Type": "AWS::Cognito::IdentityPool",
+		"Properties": {
+			"IdentityPoolName": "zer0x_podcast",
+			"AllowUnauthenticatedIdentities": true
+		}
+	}
+}

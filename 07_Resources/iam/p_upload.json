@@ -1,0 +1,32 @@
+{
+    "UserVideoUpload": {
+        "Type": "AWS::IAM::User",
+        "Properties": {
+            "UserName": "p_podcast_upload",
+            "Policies": [
+                {
+                    "PolicyName": "upload",
+                    "PolicyDocument": {
+                        "Version": "2012-10-17",
+                        "Statement": [
+                            {
+                                "Effect": "Allow",
+                                "Action": [
+                                    "s3:PutObject"
+                                ],
+                                "Resource": { "Fn::Sub": "arn:aws:s3:::${S3DBProcessing}/*"}
+                            },
+                            {
+                                "Effect": "Allow",
+                                "Action": [
+                                    "s3:ListBucket"
+                                ],
+                                "Resource": { "Fn::Sub": "arn:aws:s3:::${S3DBProcessing}"}
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+}
