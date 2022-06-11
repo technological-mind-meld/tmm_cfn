@@ -1,0 +1,17 @@
+{
+	"ApiGatewayStageRedirectToNewDomain": {
+		"Type": "AWS::ApiGateway::Stage",
+		"Properties": {
+			"StageName": "production",
+			"DeploymentId": { "Ref": "ApiGatewayDeploymentRedirectToNewDomain" },
+			"RestApiId": { "Ref": "ApiGatewayRedirectToNewDomain" },
+			"MethodSettings": [{
+				"DataTraceEnabled" : true,
+				"HttpMethod": "*",
+				"LoggingLevel" : "INFO",
+				"MetricsEnabled" : true,
+				"ResourcePath": "/*"
+			}]
+		}
+	}
+}

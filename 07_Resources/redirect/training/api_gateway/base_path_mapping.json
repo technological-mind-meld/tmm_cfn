@@ -1,0 +1,11 @@
+{
+	"ApiGatewayBasePathMappingRedirectToNewDomain": {
+		"Type" : "AWS::ApiGateway::BasePathMapping",
+		"Properties" : {
+			"DomainName" : { "Ref": "ApiGatewayDomainNameRedirectToNewDomain" },
+			"RestApiId" : { "Ref": "ApiGatewayRedirectToNewDomain" },
+			"BasePath": "",
+			"Stage" : { "Ref": "ApiGatewayStageRedirectToNewDomain" }
+		}
+	}
+}

@@ -3,7 +3,7 @@
 		"Type": "AWS::S3::Bucket",
 		"Properties": {
 			"AccessControl": "PublicRead",
-			"BucketName": "podcast.0x4447.com",
+			"BucketName": "tmmwith.us",
 			"CorsConfiguration": {
 				"CorsRules": [
 					{

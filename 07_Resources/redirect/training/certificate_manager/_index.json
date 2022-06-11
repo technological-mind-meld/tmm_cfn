@@ -1,13 +1,13 @@
 {
-    "CertificateManager": {
+    "CertificateManagerRedirectToNewDomain": {
         "Type" : "AWS::CertificateManager::Certificate",
         "Properties" : {
-            "DomainName" : "tmmwith.us",
+            "DomainName" : "podcast.0x4447.com",
             "ValidationMethod" : "DNS",
             "DomainValidationOptions" : [
                 {
-                    "DomainName" : "tmmwith.us",
-                    "HostedZoneId" : "Z1046470N7PGWS53LI2H"
+                    "DomainName" : "podcast.0x4447.com",
+                    "HostedZoneId" : "Z00371243A7EXXU5625PX"
                 }
             ]
         }

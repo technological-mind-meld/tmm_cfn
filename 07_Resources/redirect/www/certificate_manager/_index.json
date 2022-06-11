@@ -1,8 +1,8 @@
 {
-    "CertificateManager": {
+    "CertificateManagerRedirectWWW": {
         "Type" : "AWS::CertificateManager::Certificate",
         "Properties" : {
-            "DomainName" : "tmmwith.us",
+            "DomainName" : "www.tmmwith.us",
             "ValidationMethod" : "DNS",
             "DomainValidationOptions" : [
                 {

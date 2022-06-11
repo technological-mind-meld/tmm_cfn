@@ -1,0 +1,9 @@
+{
+	"ApiGatewayDeploymentRedirectToNewDomain": {
+		"Type": "AWS::ApiGateway::Deployment",
+		"Properties": {
+			"Description": "Initial deployment",
+			"RestApiId": { "Ref": "ApiGatewayRedirectToNewDomain" }
+		}
+	}
+}

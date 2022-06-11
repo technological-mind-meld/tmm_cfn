@@ -1,0 +1,23 @@
+{
+	"ApiGatewayRoleRedirectToNewDomain": {
+		"Type": "AWS::IAM::Role",
+		"Properties": {
+			"RoleName": "redirect_podcast_apigateway",
+			"AssumeRolePolicyDocument": {
+				"Version": "2012-10-17",
+				"Statement": [
+					{
+						"Effect": "Allow",
+						"Principal": {
+							"Service": "apigateway.amazonaws.com"
+						},
+						"Action": "sts:AssumeRole"
+					}
+				]
+			},
+			"ManagedPolicyArns": [
+				"arn:aws:iam::aws:policy/service-role/AmazonAPIGatewayPushToCloudWatchLogs"
+			]
+		}
+	}
+}

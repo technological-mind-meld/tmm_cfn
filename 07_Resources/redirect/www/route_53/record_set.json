@@ -1,11 +1,11 @@
 {
-    "Route53RecordSet": {
+    "Route53RecordSetRedirectWWW": {
         "Type" : "AWS::Route53::RecordSet",
         "Properties" : {
             "HostedZoneName": "tmmwith.us.",
-            "Name": "tmmwith.us",
+            "Name": "www.tmmwith.us",
             "AliasTarget" : {
-                "DNSName" : { "Fn::GetAtt": [ "CloudFront", "DomainName" ]  },
+                "DNSName" : { "Fn::GetAtt": [ "ApiGatewayDomainNameRedirectWWW", "DistributionDomainName" ]  },
                 "HostedZoneId" : "Z2FDTNDATAQYW2"
               },
             "Comment" : "Comment",

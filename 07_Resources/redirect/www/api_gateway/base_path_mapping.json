@@ -1,0 +1,11 @@
+{
+	"ApiGatewayBasePathMappingRedirectWWW": {
+		"Type" : "AWS::ApiGateway::BasePathMapping",
+		"Properties" : {
+			"DomainName" : { "Ref": "ApiGatewayDomainNameRedirectWWW" },
+			"RestApiId" : { "Ref": "ApiGatewayRedirectWWW" },
+			"BasePath": "",
+			"Stage" : { "Ref": "ApiGatewayStageRedirectWWW" }
+		}
+	}
+}

@@ -1,0 +1,8 @@
+{
+	"S3DBStorage": {
+		"Type": "AWS::S3::Bucket",
+		"Properties": {
+			"BucketName": "tmmwith.us.storage"
+		}
+	}
+}

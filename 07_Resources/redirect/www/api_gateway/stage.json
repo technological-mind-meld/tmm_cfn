@@ -1,0 +1,17 @@
+{
+	"ApiGatewayStageRedirectWWW": {
+		"Type": "AWS::ApiGateway::Stage",
+		"Properties": {
+			"StageName": "production",
+			"DeploymentId": { "Ref": "ApiGatewayDeploymentRedirectWWW" },
+			"RestApiId": { "Ref": "ApiGatewayRedirectWWW" },
+			"MethodSettings": [{
+				"DataTraceEnabled" : true,
+				"HttpMethod": "*",
+				"LoggingLevel" : "INFO",
+				"MetricsEnabled" : true,
+				"ResourcePath": "/*"
+			}]
+		}
+	}
+}

@@ -2,7 +2,7 @@
 	"S3DBProcessed": {
 		"Type": "AWS::S3::Bucket",
 		"Properties": {
-			"BucketName": "podcast.0x4447.com.processed"
+			"BucketName": "tmmwith.us.processed"
 		}
 	}
 }

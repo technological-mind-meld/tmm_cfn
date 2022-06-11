@@ -1,0 +1,13 @@
+{
+	"ApiGatewayDomainNameRedirectToNewDomain": {
+		"Type" : "AWS::ApiGateway::DomainName",
+		"Properties" : {
+			"CertificateArn" : { "Ref": "CertificateManagerRedirectToNewDomain" },
+			"DomainName" : "podcast.0x4447.com",
+			"EndpointConfiguration": {
+				"Types" : [ "EDGE" ]
+			},
+			"SecurityPolicy": "TLS_1_2"
+		}
+	}
+}

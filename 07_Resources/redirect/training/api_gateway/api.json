@@ -1,0 +1,60 @@
+{
+	"ApiGatewayRedirectToNewDomain": {
+		"Type": "AWS::ApiGateway::RestApi",
+		"Properties": {
+			"Description": "Redirection from old domain to the custom one.",
+			"Name": "redirect_podcast",
+			"Body": {
+				"swagger": "2.0",
+				"info": {
+					"description": "Redirection from old domain to the custom one.",
+					"version": "2018-08-02T22:09:40Z",
+					"title": "redirect_podcast"
+				},
+				"schemes": [
+					"https"
+				],
+				"paths": {
+					"/": {
+						"get": {
+							"consumes": [
+								"application/json"
+							],
+							"responses": {
+								"301": {
+									"description": "301 response",
+									"headers": {
+										"Location": {
+											"type": "string"
+										}
+									}
+								}
+							},
+							"x-amazon-apigateway-integration": {
+								"type": "mock",
+								"responses": {
+									"301": {
+										"statusCode": "301",
+										"responseParameters": {
+											"method.response.header.Location": "'https://tmmwith.us/'"
+										}
+									}
+								},
+								"requestTemplates": {
+									"application/json": "{\"statusCode\": 301}"
+								},
+								"passthroughBehavior": "when_no_match"
+							}
+						}
+					}
+				},
+				"definitions": {
+					"Empty": {
+						"type": "object",
+						"title": "Empty Schema"
+					}
+				}
+			}
+		}
+	}
+}

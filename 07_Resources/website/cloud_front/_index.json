@@ -3,9 +3,9 @@
 		"Type": "AWS::CloudFront::Distribution",
 		"Properties": {
 			"DistributionConfig": {
-				"Comment": "podcast.0x4447.com",
+				"Comment": "tmmwith.us",
 				"DefaultCacheBehavior": {
-					"TargetOriginId": { "Fn::Sub": "podcast.0x4447.com.s3-website-${AWS::Region}.amazonaws.com" },
+					"TargetOriginId": { "Fn::Sub": "tmmwith.us.s3-website-${AWS::Region}.amazonaws.com" },
 					"ViewerProtocolPolicy": "redirect-to-https",
 					"AllowedMethods": ["GET", "HEAD"],
 					"CachedMethods": ["GET", "HEAD"],
@@ -15,8 +15,8 @@
 				},
 				"Enabled": true,
 				"Origins": [{
-					"DomainName": { "Fn::Sub": "podcast.0x4447.com.s3-website-${AWS::Region}.amazonaws.com" },
-					"Id": { "Fn::Sub": "podcast.0x4447.com.s3-website-${AWS::Region}.amazonaws.com" },
+					"DomainName": { "Fn::Sub": "tmmwith.us.s3-website-${AWS::Region}.amazonaws.com" },
+					"Id": { "Fn::Sub": "tmmwith.us.s3-website-${AWS::Region}.amazonaws.com" },
 					"CustomOriginConfig": {
 						"HTTPPort": 80,
 						"HTTPSPort": 443,
@@ -24,7 +24,7 @@
 						"OriginSSLProtocols": ["TLSv1.2"]
 					}
 				}],
-				"Aliases": [ "podcast.0x4447.com" ],
+				"Aliases": [ "tmmwith.us" ],
 				"ViewerCertificate": {
 					"AcmCertificateArn" : { "Ref": "CertificateManager" },
 					"SslSupportMethod": "sni-only"

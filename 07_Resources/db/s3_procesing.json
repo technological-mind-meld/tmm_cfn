@@ -1,8 +1,0 @@
-{
-	"S3DBProcessing": {
-		"Type": "AWS::S3::Bucket",
-		"Properties": {
-			"BucketName": "podcast.0x4447.com.processing"
-		}
-	}
-}

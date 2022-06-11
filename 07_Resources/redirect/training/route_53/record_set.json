@@ -1,0 +1,15 @@
+{
+    "Route53RecordSetRedirectToNewDomain": {
+        "Type" : "AWS::Route53::RecordSet",
+        "Properties" : {
+            "HostedZoneName": "podcast.0x4447.com.",
+            "Name": "podcast.0x4447.com",
+            "AliasTarget" : {
+                "DNSName" : { "Fn::GetAtt": [ "ApiGatewayDomainNameRedirectToNewDomain", "DistributionDomainName" ]  },
+                "HostedZoneId" : "Z2FDTNDATAQYW2"
+              },
+            "Comment" : "Comment",
+            "Type" : "A"
+        }
+    }
+}

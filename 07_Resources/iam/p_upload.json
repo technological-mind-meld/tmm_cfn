@@ -14,14 +14,14 @@
                                 "Action": [
                                     "s3:PutObject"
                                 ],
-                                "Resource": { "Fn::Sub": "arn:aws:s3:::${S3DBProcessing}/*"}
+                                "Resource": { "Fn::Sub": "arn:aws:s3:::${S3DBStorage}/*"}
                             },
                             {
                                 "Effect": "Allow",
                                 "Action": [
                                     "s3:ListBucket"
                                 ],
-                                "Resource": { "Fn::Sub": "arn:aws:s3:::${S3DBProcessing}"}
+                                "Resource": { "Fn::Sub": "arn:aws:s3:::${S3DBStorage}"}
                             }
                         ]
                     }

@@ -1,0 +1,13 @@
+{
+	"ApiGatewayDomainNameRedirectWWW": {
+		"Type" : "AWS::ApiGateway::DomainName",
+		"Properties" : {
+			"CertificateArn" : { "Ref": "CertificateManagerRedirectWWW" },
+			"DomainName" : "www.tmmwith.us",
+			"EndpointConfiguration": {
+				"Types" : [ "EDGE" ]
+			},
+			"SecurityPolicy": "TLS_1_2"
+		}
+	}
+}
