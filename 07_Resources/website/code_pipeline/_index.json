@@ -22,8 +22,8 @@
 								"Version": "1"
 							},
 							"Configuration": {
-								"Owner": "0x4447-office",
-								"Repo": "0x4447_webpage_podcast",
+								"Owner": "technological-mind-meld",
+								"Repo": "tmm_webpage",
 								"Branch": "production",
 								"PollForSourceChanges": false,
 								"OAuthToken": { "Ref": "GitHubTokenParam" }
